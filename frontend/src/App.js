@@ -25,9 +25,9 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="heading">Welcome to the Two-Tier Application</h1>
+      <h1 className="heading">Welcome to IAMOPS</h1>
       <div className="content">
-        <p className="info">You are viewing the frontend.</p>
+        <p className="info">Have a great day you alls.</p>
         <button className="button" onClick={handleClick} disabled={loading}>
           {loading ? 'Loading...' : 'Send Request'}
         </button>

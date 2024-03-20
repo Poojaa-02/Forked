@@ -1,0 +1,22 @@
+name: Backend CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: cc89852b-9ad3-4a59-b05b-dd4c3e1a192f
+          heroku_app_name: Myname
+          heroku_email: pm9974978@gmail.com
+          heroku_process_type: web

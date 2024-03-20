@@ -1,0 +1,20 @@
+name: Frontend CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Build and deploy frontend
+        run: |
+          npm install
+          npm run build
+          # Add deployment command (e.g., using Netlify CLI or GitHub Pages)
